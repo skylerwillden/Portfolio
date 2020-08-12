@@ -1,0 +1,262 @@
+
+
+$family-primary: 'Amatic SC', cursive;
+$family-secondary: 'Open Sans Condensed', sans-serif;
+
+$primary: #3BEDC7;
+$success: #F07946;
+$info: #55615D;
+$link: #186151;
+
+.border{
+    border: dashed black;
+}
+
+// *{border: dashed 1px red;}
+
+
+@import '../node_modules/bulma/bulma.sass';
+@import "../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+html {
+    //Fog Effect
+    box-sizing: border-box;
+  }
+
+ //Navbar ***************************************************
+
+.navbar-end{
+    a:hover{
+        color: $primary;
+        background: transparent;
+    }
+    a:active{
+        color: white;
+    }
+}
+
+#myLogo{
+    height: 5vh;
+}
+
+#hero{
+    margin-top: -6vh;
+    .is-flex{
+        justify-content: space-around;
+        align-items: center;
+    }
+    #aboutMe{
+        border-radius: 200px;
+        max-height: 350px;    
+    }
+    #introText{
+        position: relative;
+        width: 50%;
+        margin-left: -10vw;
+        z-index: 2;
+        border-radius: 10px;
+    }
+    #introText:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right:0;
+        bottom: 0;
+        left: 0;
+        background-color: $info;
+        border-radius: 10px;
+        opacity: .7;
+        z-index: -1;
+    }
+    #logoHero{
+        max-height: 7vh;
+    }
+}
+
+
+
+.absolute-bg{
+    background-image: url(../images/IcelandBG.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.glass:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../images/IcelandBG.jpg);
+    box-shadow: inset 0 0 2000px rgba(56, 65, 62, 0.5);
+    filter: blur(10px);
+    background:inherit;
+}
+.glass{
+    background-color: white;
+    background:inherit;
+    margin: -5px;
+    overflow: hidden;
+}
+
+//NetFang Section *****************************************************
+
+#netfang{
+    .is-flex{
+        flex-direction: column;                
+        align-items: center;
+        figure{
+            img{
+                height: 150px;
+                width: 150px;
+            }        
+        }
+    }
+    .inner-column{
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+}
+//Glide Carousel **************************
+.glide{
+    // width: 100%;
+    .glide__slides{           
+        li{
+            display: flex;
+            justify-content: center;            
+        }
+    }
+    .glide__track{
+        position: relative;
+        z-index: 1 !important;
+        margin-left: 9vw;
+        margin-right: 9vw;
+    }
+    .glide__track:before{
+        content: '';
+        position: absolute;
+        background-color: $link;  
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1 !important;
+        opacity: .4;
+    }
+    #bulma{  
+        height: 40px;
+        align-self: center;   
+        img{
+        width: 10vw;
+        }
+    }
+}
+
+// END Glide Carousel **************************
+// EDN NetFang Section *****************************************************
+
+//Tablet and Mobile ****************************************************
+@media only screen and (max-width: 1023px){
+    #hero{        
+        .is-flex{
+            flex-direction: column;     
+            #introText{
+                margin-top: 5vh;
+                margin-right: auto;
+                margin-left: auto;
+                h1{
+                    text-align: center;
+                }
+            }
+           
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #hero{
+        margin-top: -8vh;
+    }
+    #aboutMe{
+        max-width: 300px;
+    }
+}
+
+
+//Fog Effect
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+figure {
+  margin: 0;
+}
+
+// Absolute Background
+.absolute-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  height: 100%;
+  width: 100%;
+
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+// Fog
+.fog {
+  position: relative;
+
+  height: 100vh;
+  width: 100%;
+  
+  background-color: #000;
+
+  &__container {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+  &__img {
+    position: absolute;
+ 
+    height: 100vh;
+    width: 300vw;
+
+    &--first {
+      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png') repeat-x;
+      background-size: contain;
+      background-position: center;
+      animation: marquee 60s linear infinite;
+    }
+
+    &--second {
+      background: url('https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png') repeat-x;
+      background-size: contain;
+      background-position: center;
+      animation: marquee 40s linear infinite;
+    }
+  }
+}
+
+// Marquee
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-200vw, 0, 0); }
+}
