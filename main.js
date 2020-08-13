@@ -47,6 +47,9 @@ function activateModal(theElement){
       case 'poi':
           tempModal = poi;
           break;
+      case 'iceland':
+          tempModal = iceland;
+          break;
       default:
           tempModal = movieManagement;
     }
@@ -284,3 +287,8 @@ var poi = '<h1 class="title is-3 has-text-success  has-text-centered pt-2">~POI 
 '</div>       '+     
 '</div>   '+                                   
 '</div> ';
+
+var iceland =  '<h1 class="title is-3 has-text-success  has-text-centered pt-2">~Iceland Travel~</h1> '+
+'<div style="border-radius: 5px; overflow: hidden;">'+
+'<iframe  src="https://drive.google.com/file/d/11vh0iQCanHBxAmQ6XCAU7-iUOgLp4WFQ/preview" width="640" height="480"></iframe>'+
+'</div>';

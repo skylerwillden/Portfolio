@@ -1,0 +1,63 @@
+
+
+$family-primary: 'Amatic SC', cursive;
+$family-secondary: 'Open Sans Condensed', sans-serif;
+
+$primary: #3BEDC7;
+$success: #F07946;
+$info: #55615D;
+$link: #186151;
+
+.border{
+    border: dashed black;
+}
+
+// *{border: dashed 1px red;}
+
+
+@import '../node_modules/bulma/bulma.sass';
+@import "../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+html {
+    //Fog Effect
+    box-sizing: border-box;
+  }
+
+ //Navbar ***************************************************
+
+.navbar-end{
+    a:hover{
+        color: $primary;
+        background: transparent;
+    }
+    a:active{
+        color: white;
+    }
+}
+
+#myLogo{
+    height: 5vh;
+}
+
+#hero{
+    margin-top: -6vh;
+    .is-flex{
+        justify-content: space-around;
+        align-items: center;
+    }
+    .formContainer{
+        width: 30%;
+    }
+    .label{
+        color: white;
+
+    }
+}
+
+
+
+
+
+
+

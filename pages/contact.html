@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Site</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/contact.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/3a801840ba.js" crossorigin="anonymous"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar glass is-fixed-top">
+  <nav class="navbar is-fixed-top">
     <div class="container">
       <div class="navbar-brand pt-1 pl-1">
         <!-- <a class="navbar-item"> -->
-          <img id="myLogo" src="logos/Netfanglogo.png" alt="Logo">
+          <img id="myLogo" src="../logos/Netfanglogo.png" alt="Logo">
         <!-- </a> -->
         <span class="navbar-burger burger" data-target="navbarMenuHeroA">
           <span></span>
@@ -26,13 +26,16 @@
       </div>
       <div id="navbarMenuHeroA" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item">
+          <a href="../index.html" class="navbar-item">
             Home
           </a>
-          <a class="navbar-item">
+          <a href="gallery.html" class="navbar-item">
             Gallery
           </a>
-          <a class="navbar-item">
+          <a  href="about.html"class="navbar-item">
+            About
+          </a>
+          <a  href="#"class="navbar-item">
             Contact
           </a>
           <span class="navbar-item">
@@ -47,22 +50,82 @@
       </div>
     </div>
   </nav>
-    <section id="hero" class="hero is-success is-fullheight">
+    <section id="hero" class="hero is-link is-fullheight">
         <div class="hero-body">
-          <div class="container">
-            <h1 class="title">
-              Fullheight title
-            </h1>
-            <h2 class="subtitle">
-              Fullheight subtitle
-            </h2>
+          <div class="container is-flex">
+            <div class=" formContainer">
+              <h1 class="title is-1 has-text-success has-text-centered">Contact Us</h1>
+              <div class="field">
+                <label class="label title is-4">Name</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Text input">
+                </div>
+              </div>                        
+              
+              <div class="field">
+                <label class="label is-4 title">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input" type="email" placeholder="Email input" value="hello@">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <!-- <i class="fas fa-exclamation-triangle"></i> -->
+                  </span>
+                </div>
+                <!-- <p class="help is-danger">This email is invalid</p> -->
+              </div>
+              
+              <div class="field ">
+                <label class="label title is-4">Subject</label>
+                <div class="control">
+                  <div class="select">
+                    <select>
+                      <option>Select dropdown</option>
+                      <option>With options</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="field">
+                <label class="label title is-4">Message</label>
+                <div class="control">
+                  <textarea class="textarea" placeholder="Textarea"></textarea>
+                </div>
+              </div>
+              
+              <div class="field">
+                <div class="control">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    I agree to the <a href="#">terms and conditions</a>
+                  </label>
+                </div>
+              </div>
+                         
+              
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-link">Submit</button>
+                </div>
+                <div class="control">
+                  <button class="button is-link is-light">Cancel</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section>
-        <div style="height: 100px; width: 300px;"></div>
-
-      </section>
+      <footer class="footer has-background-info">
+        <div class="content has-text-centered">
+          <p>
+           <a href="#"><i class="fab fa-twitter fa-3x has-text-success px-2"></i></a>
+           <a href="#"><i class="fab fa-facebook fa-3x has-text-success px-2"></i></a>
+           <a href="#"><i class="fab fa-instagram fa-3x has-text-success px-2"></i></a>
+          </p>
+        </div>
+      </footer> 
       <script src="js/main.js"></script>
 </body>
 </html>

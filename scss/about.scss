@@ -1,0 +1,157 @@
+
+
+$family-primary: 'Amatic SC', cursive;
+$family-secondary: 'Open Sans Condensed', sans-serif;
+
+$primary: #3BEDC7;
+$success: #F07946;
+$info: #55615D;
+$link: #186151;
+
+.border{
+    border: dashed black;
+}
+
+// *{border: dashed 1px red;}
+
+
+@import '../node_modules/bulma/bulma.sass';
+@import "../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+html {
+    //Fog Effect
+    box-sizing: border-box;
+  }
+
+ //Navbar ***************************************************
+
+.navbar-end{
+    a:hover{
+        color: $primary;
+        background: transparent;
+    }
+    a:active{
+        color: white;
+    }
+}
+
+#myLogo{
+    height: 5vh;
+    min-height: 4vh;
+}
+
+
+
+
+    #aboutMe{
+        border-radius: 200px;
+        max-height: 300px;    
+    }
+
+    .fullvh{
+        height: 90vh;
+    }
+
+    
+
+    .width{
+        width: 30%;
+    }
+    .is-flex{
+        justify-content: center;
+        align-items:  center;
+    }
+    @media only screen and (max-width: 768px){
+        .is-flex{
+            flex-direction: column;
+        }
+        .width {
+            width: 50%;
+        }
+    }
+    
+    #tileContainer{
+        justify-content: center;
+        width: 60% !important;
+        margin-top: 15vh !important;
+        .is-ancestor{
+            // margin-top: 50vh;
+            max-height: 40vh !important;
+            min-width: 30vw;
+        }
+    }
+    #tile1{
+        background-image: url(../images/gullfoss.jpg);
+        background-size: cover;
+    }
+    #tile2{
+        background-image: url(../images/us.jpg);
+        background-size: cover;
+    }
+    #tile3{
+        background-image: url(../images/vik.jpg);
+        background-size: cover;
+    }
+    #tile4{
+        background-image: url(../images/facepaint.jpg);
+        background-size: cover;
+        height: 423px;
+    }
+
+.tileImage{
+    height: 200px;    
+    width: 100%;
+    border-radius: 5px;
+}
+.tileImage:hover{
+    filter: brightness(1.1);
+}
+
+.small-tile{
+    margin-left: 5vw !important;
+}
+
+@media only screen and (max-width: 768px){
+    .tileImage{
+        width: auto;
+        max-height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// END Glide Carousel **************************
+// EDN NetFang Section *****************************************************
+
+
+
+
+
+// // Absolute Background
+// .absolute-bg {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 0;
+
+//   height: 100%;
+//   width: 100%;
+
+//   background-position: 50%;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   overflow: hidden;
+// }
+
